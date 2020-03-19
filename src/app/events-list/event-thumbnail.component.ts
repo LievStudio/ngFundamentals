@@ -4,7 +4,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     selector: 'event-thumbnail',
     templateUrl: './event-thumbnail.component.html',
     styles: [`
-    .pad-left {margin-left: 10 px;}
+    .green {color: #003300 !important;},
+    .bold {font-weight: bold},
+    .thumbnail {min-height: 210 px},
+    .pad-left {margin-left: 10 px}
     .well div {color: #bbb};
     `]
 })
@@ -17,5 +20,10 @@ export class EventThumbnailComponent {
     // handleClickMe(): void {
     //     this.eventClick.emit(this.event.name);
     // }
+
+    getStartTimeClass(): any {
+      const isEarlyStart = this.event && this.event.time === '8:00 am'; 
+      return {green: isEarlyStart, bold: isEarlyStart};
+    }
 
 }
