@@ -9,7 +9,8 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
-  CreateSessionComponent
+  CreateSessionComponent,
+  SessionListComponent
 } from './events-list/index';
 
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { appRoutes } from './routes';
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,
